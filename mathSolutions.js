@@ -19,5 +19,4 @@ function checkpalendrome(inputstring){
     }
 }
 
-let palendromestring = "LEVEL";
-checkpalendrome(palendromestring);
+
