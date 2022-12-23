@@ -1,8 +1,14 @@
 function checkpalendrome(inputstring){
+    if(inputstring.length>10){
+        document.getElementById('result').innerHTML="<h1>STRING LENGTH BIGGER THAN 10 NOT ALLOWED</h1>";
+    }
+    
+    else{
+    let inputsecond=inputstring.toLowerCase();
     var reversestringarray=[];
 
-    for(var j=inputstring.length-1;j>=0;j--){
-       reversestringarray.push(inputstring[j]);
+    for(var j=inputsecond.length-1;j>=0;j--){
+       reversestringarray.push(inputsecond[j]);
     }
 
     var reversestring="";
@@ -10,13 +16,13 @@ function checkpalendrome(inputstring){
         reversestring+=reversestringarray[k];
     }
 
-    if(reversestring===inputstring){
-        console.log("THIS STRING IS PALENDROME");
+
+    if(reversestring===inputsecond){
+        document.getElementById('result').innerHTML="<h1>THIS IS A PALENDROME</h1>";
     }
     else{
-        console.log("THIS STRING IS NOT PALENDROME");
+        document.getElementById('result').innerHTML="<h1>THIS IS NOT A PALENDROME</h1>";
 
     }
 }
-
-
+}
